@@ -3,51 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name="theme-color" content="#fff7e6">
-<title>三年级语文大冒险</title>
+<title>三年级语文大冒险·高难度版</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  -webkit-tap-highlight-color:transparent;
-}
-
-html,body{
-  margin:0;
-  padding:0;
-  min-height:100%;
-}
-
+*{box-sizing:border-box}
 body{
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Microsoft YaHei",
-    sans-serif;
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
   background:linear-gradient(135deg,#fff8e8,#eaf7ff);
   color:#263238;
 }
-
-button,
-input{
-  font-family:inherit;
-}
-
-button{
-  cursor:pointer;
-  touch-action:manipulation;
-}
-
-.app{
-  width:100%;
-  max-width:760px;
-  margin:auto;
-  min-height:100vh;
-  padding:12px;
-}
-
-/* 顶部 */
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+.app{max-width:820px;margin:auto;min-height:100vh;padding:14px}
 
 .top{
   display:flex;
@@ -56,51 +24,26 @@ button{
   gap:8px;
   margin-bottom:12px;
 }
-
-.brand{
-  font-size:21px;
-  font-weight:900;
-}
-
-.stats{
-  display:flex;
-  gap:6px;
-}
-
+.brand{font-size:21px;font-weight:900}
+.stats{display:flex;gap:5px}
 .pill{
   background:#fff;
-  border-radius:999px;
+  border-radius:99px;
   padding:7px 10px;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
+  box-shadow:0 3px 12px #0001;
   font-size:13px;
   white-space:nowrap;
 }
 
-/* 首页 */
-
-.hero,
-.panel,
-.card{
+.hero,.panel,.card{
   background:#fff;
   border-radius:22px;
   padding:18px;
-  box-shadow:0 7px 25px rgba(0,0,0,.07);
+  box-shadow:0 7px 25px #00000012;
 }
-
-.hero{
-  margin-bottom:14px;
-}
-
-.hero h1{
-  margin:0 0 8px;
-  font-size:28px;
-}
-
-.hero p{
-  color:#607d8b;
-  line-height:1.65;
-  margin:8px 0;
-}
+.hero{margin-bottom:14px}
+.hero h1{margin:0 0 8px;font-size:28px}
+.hero p{color:#607d8b;line-height:1.7}
 
 .toolbar{
   display:flex;
@@ -108,257 +51,159 @@ button{
   flex-wrap:wrap;
   margin:10px 0;
 }
-
 .toolbar input{
   flex:1;
   min-width:180px;
-  padding:12px;
+  padding:11px;
   border:1px solid #dce5ea;
   border-radius:12px;
   outline:none;
-  font-size:15px;
 }
-
-.toolbar input:focus{
-  border-color:#ff9f43;
-}
-
-/* 按钮 */
-
-.primary,
-.secondary{
+.primary,.secondary{
   border:0;
   border-radius:13px;
-  padding:12px 16px;
+  padding:11px 15px;
   font-weight:800;
-  font-size:14px;
-  min-height:44px;
 }
-
-.primary{
-  background:#ff9f43;
-  color:#fff;
-  box-shadow:0 4px 10px rgba(255,159,67,.25);
-}
-
-.secondary{
-  background:#eef3f7;
-  color:#455a64;
-}
-
-.primary:active,
-.secondary:active{
-  transform:scale(.97);
-}
-
-/* 关卡 */
+.primary{background:#ff9f43;color:white}
+.secondary{background:#eef3f7;color:#455a64}
 
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:11px;
 }
-
 .card{
-  min-height:205px;
+  min-height:175px;
   padding:15px;
-  position:relative;
 }
-
-.card h3{
-  margin:0 45px 6px 0;
-  font-size:17px;
-}
-
-.card p{
-  font-size:13px;
-  color:#78909c;
-  line-height:1.5;
-  min-height:40px;
-}
-
-.badge{
-  position:absolute;
-  right:14px;
-  top:13px;
-  font-size:29px;
-}
-
-.locked{
-  opacity:.58;
-  filter:grayscale(.45);
-}
-
-.unlocked{
-  border:2px solid #ffe0b2;
-}
-
-.level-progress{
-  margin:8px 0;
-  font-size:12px;
-  color:#78909c;
-}
-
-.progress{
-  height:9px;
-  background:#e8eef2;
-  border-radius:999px;
-  overflow:hidden;
-  margin-top:5px;
-}
-
-.progress i{
-  display:block;
-  height:100%;
-  background:#66bb6a;
-  width:0;
-  transition:.3s;
-}
+.card h3{margin:0 0 6px}
+.card p{font-size:13px;color:#78909c;line-height:1.5}
+.badge{float:right;font-size:27px}
 
 .stars{
   color:#ffb300;
   font-weight:800;
-  margin:8px 0;
+  margin:9px 0;
+}
+.progress{
+  height:9px;
+  background:#e8eef2;
+  border-radius:99px;
+  overflow:hidden;
+}
+.progress i{
+  display:block;
+  height:100%;
+  background:#66bb6a;
+  transition:.3s;
 }
 
-/* 阶段 */
-
-.stage-bar{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:5px;
-  margin:10px 0 15px;
-}
+.hidden{display:none!important}
+.center{text-align:center}
 
 .stage{
-  text-align:center;
-  padding:8px 3px;
-  border-radius:10px;
-  background:#eef3f7;
-  color:#78909c;
-  font-size:11px;
-}
-
-.stage.active{
-  background:#ff9f43;
-  color:#fff;
-  font-weight:800;
-}
-
-.stage.done{
-  background:#e8f5e9;
-  color:#2e7d32;
-}
-
-/* 游戏 */
-
-.game-head{
   display:flex;
-  align-items:center;
-  gap:7px;
-  flex-wrap:wrap;
+  gap:6px;
+  overflow-x:auto;
   margin-bottom:10px;
 }
-
-.game-head .grow{
-  flex:1;
+.stage span{
+  background:#eef3f7;
+  padding:7px 10px;
+  border-radius:99px;
+  font-size:12px;
+  white-space:nowrap;
+}
+.stage .active{
+  background:#ff9f43;
+  color:#fff;
+  font-weight:bold;
 }
 
 .question{
-  font-size:21px;
-  font-weight:900;
-  line-height:1.55;
-  margin:18px 0;
+  font-size:20px;
+  font-weight:800;
+  line-height:1.65;
+  margin:15px 0;
 }
 
-.question-type{
-  color:#ff9f43;
-  font-size:14px;
-  font-weight:800;
+.article{
+  background:#f8fafb;
+  border-left:4px solid #90caf9;
+  padding:14px;
+  border-radius:10px;
+  line-height:1.9;
+  margin-bottom:15px;
 }
 
 .options{
   display:grid;
   gap:10px;
 }
-
 .option{
   width:100%;
   padding:14px;
   border:2px solid transparent;
-  border-radius:15px;
+  border-radius:14px;
   background:#f5f8fa;
   text-align:left;
-  font-size:16px;
-  line-height:1.45;
-  color:#263238;
-  min-height:52px;
   transition:.15s;
 }
-
 .option:hover{
-  background:#edf3f6;
+  background:#edf5f9;
 }
-
-.option:active{
-  transform:scale(.985);
-}
-
 .option.correct{
   border-color:#66bb6a;
   background:#effaf0;
-  color:#2e7d32;
-  font-weight:800;
 }
-
 .option.wrong{
   border-color:#ef5350;
   background:#fff0ef;
-  color:#c62828;
 }
 
-.option:disabled{
-  opacity:1;
-  cursor:default;
+.answer-input{
+  width:100%;
+  padding:13px;
+  border:2px solid #dce5ea;
+  border-radius:13px;
+  outline:none;
+  resize:vertical;
+  min-height:50px;
 }
+.answer-input:focus{border-color:#90caf9}
 
 .feedback{
-  margin:14px 0;
+  margin:12px 0;
   padding:13px;
-  border-radius:13px;
-  line-height:1.55;
-  font-size:14px;
+  border-radius:12px;
+  line-height:1.6;
 }
+.ok{background:#edf8ef;color:#2e7d32}
+.bad{background:#fff0ef;color:#c62828}
 
-.ok{
-  background:#edf8ef;
-  color:#2e7d32;
+.type-tag{
+  display:inline-block;
+  padding:5px 9px;
+  border-radius:8px;
+  background:#fff3e0;
+  color:#e65100;
+  font-size:12px;
+  font-weight:bold;
 }
-
-.bad{
-  background:#fff0ef;
-  color:#c62828;
-}
-
-/* 结果 */
-
-.result-icon{
-  font-size:60px;
-}
-
-.center{
-  text-align:center;
-}
-
-/* 错题本 */
 
 .mistake{
-  margin:10px 0;
+  margin:9px 0;
   padding:12px;
   border-left:5px solid #ff9f43;
   background:#fafafa;
   border-radius:9px;
-  line-height:1.6;
+  line-height:1.7;
+}
+
+.locked{
+  opacity:.55;
+  filter:grayscale(.4);
 }
 
 .small{
@@ -366,53 +211,17 @@ button{
   color:#78909c;
 }
 
-.hidden{
-  display:none!important;
+.section-title{
+  margin-top:22px;
+  margin-bottom:10px;
 }
 
-/* 手机 */
-
-@media(max-width:520px){
-
-  .app{
-    padding:10px;
-  }
-
-  .brand{
-    font-size:18px;
-  }
-
-  .pill{
-    padding:6px 8px;
-    font-size:12px;
-  }
-
-  .hero h1{
-    font-size:24px;
-  }
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .card{
-    min-height:190px;
-  }
-
-  .question{
-    font-size:19px;
-  }
-
-  .option{
-    font-size:16px;
-    padding:15px 13px;
-    min-height:56px;
-  }
-
-  .stage{
-    font-size:10px;
-    padding:7px 2px;
-  }
+@media(max-width:560px){
+  .grid{grid-template-columns:1fr}
+  .hero h1{font-size:24px}
+  .question{font-size:18px}
+  .brand{font-size:18px}
+  .pill{font-size:12px;padding:6px 8px}
 }
 </style>
 </head>
@@ -421,260 +230,123 @@ button{
 
 <div class="app">
 
-<!-- 顶部 -->
 <div class="top">
   <div class="brand">📚 三年级语文大冒险</div>
-
   <div class="stats">
     <span class="pill">⭐ <b id="stars">0</b></span>
     <span class="pill">🪙 <b id="coins">0</b></span>
   </div>
 </div>
 
-
-<!-- ================= 首页 ================= -->
-
+<!-- 首页 -->
 <section id="home">
 
-  <div class="hero">
+<div class="hero">
+  <h1>🏆 三年级语文高难度挑战</h1>
 
-    <h1>🎮 三年级语文大冒险</h1>
-
-    <p>
-      每一篇课文都是一个独立关卡。
-      闯过四个训练阶段，就能获得星星和积分！
-    </p>
-
-    <div class="toolbar">
-      <input
-        id="name"
-        placeholder="输入孩子名字（可选）"
-      >
-
-      <button
-        class="primary"
-        id="startAdventureBtn"
-      >
-        🚀 开始冒险
-      </button>
-    </div>
-
-    <div class="toolbar">
-
-      <button
-        class="secondary"
-        id="mistakeBtn"
-      >
-        📕 错题本
-      </button>
-
-      <button
-        class="secondary"
-        id="dailyBtn"
-      >
-        🎁 今日挑战
-      </button>
-
-      <button
-        class="secondary"
-        id="resetBtn"
-      >
-        重置记录
-      </button>
-
-    </div>
-
-  </div>
-
-  <div
-    id="levels"
-    class="grid"
-  ></div>
-
-</section>
-
-
-<!-- ================= 游戏 ================= -->
-
-<section
-  id="game"
-  class="hidden"
->
-
-  <div class="game-head">
-
-    <button
-      class="secondary"
-      id="backBtn"
-    >
-      ← 返回
-    </button>
-
-    <span
-      class="pill grow"
-      id="levelTitle"
-    ></span>
-
-    <span class="pill">
-      <b id="qNo">1</b>/<b id="qTotal">4</b>
-    </span>
-
-  </div>
-
-
-  <!-- 四阶段 -->
-
-  <div
-    class="stage-bar"
-    id="stageBar"
-  >
-    <div
-      class="stage active"
-      id="stage0"
-    >
-      🔤 生字
-    </div>
-
-    <div
-      class="stage"
-      id="stage1"
-    >
-      📝 词语
-    </div>
-
-    <div
-      class="stage"
-      id="stage2"
-    >
-      📖 课文理解
-    </div>
-
-    <div
-      class="stage"
-      id="stage3"
-    >
-      📚 阅读理解
-    </div>
-  </div>
-
-
-  <div class="panel">
-
-    <div
-      class="question-type"
-      id="questionType"
-    ></div>
-
-    <div
-      class="stars"
-      id="qStars"
-    >
-      本题奖励 ⭐
-    </div>
-
-    <div
-      class="question"
-      id="question"
-    ></div>
-
-    <div
-      class="options"
-      id="options"
-    ></div>
-
-    <div
-      id="feedback"
-    ></div>
-
-    <button
-      id="nextBtn"
-      class="primary hidden"
-    >
-      下一题 →
-    </button>
-
-  </div>
-
-</section>
-
-
-<!-- ================= 结果 ================= -->
-
-<section
-  id="result"
-  class="hidden"
->
-
-  <div class="panel center">
-
-    <div class="result-icon">
-      🏆
-    </div>
-
-    <h1 id="resultTitle">
-      闯关完成！
-    </h1>
-
-    <p id="resultText"></p>
-
-    <div
-      class="stars"
-      id="resultStars"
-    ></div>
-
-    <p id="resultReward"></p>
-
-    <div class="toolbar">
-      <button
-        class="primary"
-        id="homeBtn"
-      >
-        🗺️ 返回地图
-      </button>
-
-      <button
-        class="secondary"
-        id="replayBtn"
-      >
-        🔄 再挑战
-      </button>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= 错题本 ================= -->
-
-<section
-  id="mistakes"
-  class="hidden"
->
+  <p>
+    每篇课文独立闯关。<br>
+    🔤 生字 → 📝 词语 → 📖 课文理解 → 📚 阅读理解
+  </p>
 
   <div class="toolbar">
-
-    <button
-      class="secondary"
-      id="mistakeBackBtn"
-    >
-      ← 返回地图
-    </button>
-
+    <input id="name" placeholder="输入孩子名字（可选）">
+    <button class="primary" id="startAdventure">开始冒险 🚀</button>
   </div>
 
-  <div class="panel">
-
-    <h2>📕 我的错题本</h2>
-
-    <p
-      id="mistakeCount"
-      class="small"
-    ></p>
-
-    <div id="mistakeList"></div>
-
+  <div class="toolbar">
+    <button class="secondary" id="mistakeBtn">📕 错题本</button>
+    <button class="secondary" id="dailyBtn">🎁 今日挑战</button>
+    <button class="secondary" id="resetBtn">重置记录</button>
   </div>
+</div>
+
+<h3 class="section-title">🗺️ 课文关卡地图</h3>
+
+<div id="levels" class="grid"></div>
+
+</section>
+
+
+<!-- 游戏 -->
+<section id="game" class="hidden">
+
+<div class="toolbar">
+  <button class="secondary" id="homeBtn">← 返回地图</button>
+  <span class="pill" id="levelTitle"></span>
+  <span class="pill">第 <b id="qNo">1</b> 题</span>
+</div>
+
+<div class="stage">
+  <span id="stage1">🔤 生字</span>
+  <span id="stage2">📝 词语</span>
+  <span id="stage3">📖 课文理解</span>
+  <span id="stage4">📚 阅读理解</span>
+</div>
+
+<div class="panel">
+
+  <div class="stars" id="qStars"></div>
+
+  <div>
+    <span class="type-tag" id="questionType">选择题</span>
+  </div>
+
+  <div id="article" class="article hidden"></div>
+
+  <div class="question" id="question"></div>
+
+  <div id="answerArea"></div>
+
+  <div id="feedback"></div>
+
+  <button id="submitBtn" class="primary hidden">提交答案 ✓</button>
+
+  <button id="nextBtn" class="primary hidden">下一题 →</button>
+
+</div>
+
+</section>
+
+
+<!-- 成绩 -->
+<section id="result" class="hidden">
+
+<div class="panel center">
+
+  <div style="font-size:60px">🏆</div>
+
+  <h1 id="resultTitle">挑战完成！</h1>
+
+  <p id="resultText"></p>
+
+  <div class="stars" id="resultStars"></div>
+
+  <button class="primary" id="resultHome">回到地图</button>
+
+  <button class="secondary" id="replayBtn">再来一次</button>
+
+</div>
+
+</section>
+
+
+<!-- 错题本 -->
+<section id="mistakes" class="hidden">
+
+<div class="toolbar">
+  <button class="secondary" id="mistakeHome">← 返回</button>
+</div>
+
+<div class="panel">
+
+<h2>📕 错题本</h2>
+
+<p id="mistakeCount"></p>
+
+<div id="mistakeList"></div>
+
+</div>
 
 </section>
 
@@ -684,1301 +356,1170 @@ button{
 <script>
 
 /* =========================================================
-   三年级语文大冒险
-   正式架构：
-   28+课文
-   每课4阶段
-   ========================================================= */
-
-
-/* =========================
-   28篇课文关卡
-   ========================= */
+   基础数据
+========================================================= */
 
 const levels = [
 
-  ["燕子","春天里的燕子","🐦"],
-  ["古诗三首","《绝句》《惠崇春江晚景》《三衢道中》","📜"],
-  ["荷花","叶圣陶笔下的荷花","🪷"],
-  ["昆虫备忘录","有趣的昆虫世界","🦋"],
-
-  ["守株待兔","寓言故事","🐰"],
-  ["陶罐和铁罐","学会正确看待自己","🏺"],
-  ["鹿角和鹿腿","外表与实用","🦌"],
-  ["池子与河流","生命的价值","🌊"],
-
-  ["纸的发明","中国古代科技","📜"],
-  ["赵州桥","古代建筑","🌉"],
-  ["一幅名扬中外的画","传统绘画","🖼️"],
-
-  ["花钟","植物的秘密","🌸"],
-  ["蜜蜂","科学观察","🐝"],
-  ["小虾","有趣的小动物","🦐"],
-
-  ["童年的水墨画","童年生活","🎨"],
-  ["剃头大师","有趣的童年","✂️"],
-  ["肥皂泡","童年游戏","🫧"],
-  ["我不能失信","诚实守信","🤝"],
-
-  ["我们奇妙的世界","认识世界","🌍"],
-  ["海底世界","神奇海洋","🌊"],
-  ["火烧云","美丽景象","☁️"],
-
-  ["慢性子裁缝和急性子顾客","有趣故事","🧵"],
-  ["漏","民间故事","🏠"],
-  ["枣核","聪明的小故事","🌰"],
-
-  ["大象的耳朵","动物故事","🐘"],
-  ["小真的长头发","想象故事","💇"],
-  ["方帽子店","童话故事","🎩"],
-  ["漏斗里的秘密","阅读拓展","🔍"]
-
+["燕子","《燕子》","🐦"],
+["古诗三首","《绝句》《惠崇春江晚景》《三衢道中》","🌸"],
+["荷花","《荷花》","🪷"],
+["昆虫备忘录","《昆虫备忘录》","🦋"],
+["守株待兔","《守株待兔》","🐇"],
+["陶罐和铁罐","《陶罐和铁罐》","🏺"],
+["鹿角和鹿腿","《鹿角和鹿腿》","🦌"],
+["池子与河流","《池子与河流》","🌊"],
+["燕子专列","《燕子专列》","🚆"],
+["一个小村庄的故事","《一个小村庄的故事》","🏡"],
+["我不能失信","《我不能失信》","🤝"],
+["赵州桥","《赵州桥》","🌉"],
+["一幅名扬中外的画","《一幅名扬中外的画》","🖼️"],
+["花钟","《花钟》","🌺"],
+["蜜蜂","《蜜蜂》","🐝"],
+["小虾","《小虾》","🦐"],
+["宇宙的另一边","《宇宙的另一边》","🚀"],
+["我变成了一棵树","《我变成了一棵树》","🌳"],
+["童年的水墨画","《童年的水墨画》","🎨"],
+["剃头大师","《剃头大师》","✂️"],
+["肥皂泡","《肥皂泡》","🫧"],
+["我不能失信","《我不能失信》","⭐"],
+["我们奇妙的世界","《我们奇妙的世界》","🌍"],
+["海底世界","《海底世界》","🐠"],
+["火烧云","《火烧云》","☁️"],
+["慢性子裁缝和急性子顾客","《慢性子裁缝和急性子顾客》","🧵"],
+["方帽子店","《方帽子店》","🎩"],
+["漏","《漏》","🐯"],
+["枣核","《枣核》","🌰"],
+["小真的长头发","《小真的长头发》","💇"],
+["我变成了一棵树·拓展","拓展阅读","🌲"]
 ];
 
 
 /* =========================================================
    题库
-   每一道题格式：
+   type:
+   choice = 选择
+   fill   = 填空
+   judge  = 判断
+   text   = 简答
+========================================================= */
 
-   {
-      q:"问题",
-      options:["A","B","C","D"],
-      answer:0,
-      explain:"解析"
-   }
+const commonQuestions = [
 
-   注意：
-   answer 保存的是原始答案。
-   显示时会自动随机排列。
-   ========================================================= */
+/* 生字 */
+[
+{
+type:"choice",
+q:"“凑”字在“凑成”一词中最恰当的意思是？",
+o:["聚合、拼合","躲避","观察","推开"],
+a:0
+},
+{
+type:"choice",
+q:"下列词语中，“掠”字读音正确的一项是？",
+o:["lüè","luè","lüě","liè"],
+a:0
+},
+{
+type:"fill",
+q:"根据拼音写字：róng huà → ______",
+a:"融化"
+},
+{
+type:"choice",
+q:"“疲倦”中的“倦”最接近下面哪个意思？",
+o:["疲乏","卷起","弯曲","依靠"],
+a:0
+}
+],
 
+/* 词语 */
+[
+{
+type:"choice",
+q:"下列“轻”字的意思与“轻快”中相同的是？",
+o:["动作轻快","轻装上阵","年轻人","轻声细语"],
+a:0
+},
+{
+type:"choice",
+q:"“光彩夺目”中的“夺目”最恰当的解释是？",
+o:["光彩耀眼，使人注目","把东西抢走","眼睛疲劳","颜色变暗"],
+a:0
+},
+{
+type:"fill",
+q:"把词语补充完整：争（ ）斗艳",
+a:"奇"
+},
+{
+type:"choice",
+q:"下列词语搭配最恰当的一项是？",
+o:["轻快的翅膀","猛烈的花朵","坚硬的微风","缓慢的阳光"],
+a:0
+}
+],
 
-/* 基础题模板 */
+/* 课文理解 */
+[
+{
+type:"choice",
+q:"阅读课文时，如果作者连续使用几个表示动作的词语，最可能是在突出什么？",
+o:["事物动作的连续性和画面感","人物的年龄","天气温度","文章字数"],
+a:0
+},
+{
+type:"judge",
+q:"判断：理解课文不能只看单个句子的意思，还应该联系上下文。",
+a:true
+},
+{
+type:"choice",
+q:"如果一个人物前后态度发生明显变化，阅读时最应该关注什么？",
+o:["导致变化的事情和人物心理","文章用了多少标点","人物姓名长度","插图大小"],
+a:0
+},
+{
+type:"text",
+q:"为什么阅读课文时不能只记答案，而要回到课文中寻找依据？",
+a:["依据","原文","课文","理解"]
+}
+],
 
-const templates = {
+/* 阅读 */
+[
+{
+type:"article",
+article:
+"春天到了，小鸟在枝头唱歌。小明每天放学都会经过一片小树林。有一天，他发现地上有一只受伤的小鸟。小明没有把它带回家，而是先观察它的伤势，然后联系了附近的动物救助站。几天以后，小鸟恢复健康，被放回了树林。",
+type:"choice",
+q:"从这段话可以看出小明是一个怎样的孩子？",
+o:["有爱心且做事有方法","喜欢把动物带回家","做事非常冲动","不关心小动物"],
+a:0
+},
+{
+type:"choice",
+q:"小明为什么没有直接把小鸟带回家？",
+o:["因为他选择了更合适的救助方法","因为他害怕小鸟","因为他不喜欢小鸟","因为小鸟飞走了"],
+a:0
+},
+{
+type:"judge",
+q:"判断：帮助小动物时，应该根据实际情况采用合适的方法。",
+a:true
+},
+{
+type:"text",
+q:"这篇短文告诉我们一个什么道理？",
+a:["爱护","动物","方法","责任","爱心"]
+}
+]
 
-  "燕子":[
-    {
-      stage:0,
-      q:"“燕”字的正确读音是？",
-      options:["yàn","yān","yáng","yǎn"],
-      answer:0,
-      explain:"燕子的“燕”读 yàn。"
-    },
-    {
-      stage:0,
-      q:"下面哪个词语书写正确？",
-      options:["吹拂","吹佛","吹福","吹服"],
-      answer:0,
-      explain:"正确词语是“吹拂”。"
-    },
-    {
-      stage:1,
-      q:"“聚拢”最接近下面哪个意思？",
-      options:["聚集到一起","慢慢散开","停下来","跳起来"],
-      answer:0,
-      explain:"聚拢就是聚集、靠拢到一起。"
-    },
-    {
-      stage:1,
-      q:"“光彩夺目”形容什么？",
-      options:["光彩鲜明耀眼","声音很大","速度很快","天气寒冷"],
-      answer:0,
-      explain:"光彩夺目指光彩鲜明耀眼。"
-    },
-    {
-      stage:2,
-      q:"课文《燕子》主要描写了什么？",
-      options:["春天燕子的可爱和飞行姿态","夏天的炎热","秋天的落叶","冬天的雪景"],
-      answer:0,
-      explain:"课文主要描写春天燕子的外形、飞行和停歇。"
-    },
-    {
-      stage:2,
-      q:"“剪刀似的尾巴”使用了什么修辞手法？",
-      options:["比喻","拟人","排比","夸张"],
-      answer:0,
-      explain:"把燕子的尾巴比作剪刀，是比喻。"
-    },
-    {
-      stage:3,
-      q:"阅读文章时，如果题目问“为什么”，应该重点寻找什么？",
-      options:["原因和依据","人物姓名","标点数量","文章颜色"],
-      answer:0,
-      explain:"“为什么”通常对应文章中的原因和依据。"
-    },
-    {
-      stage:3,
-      q:"提高阅读理解最好的方法是？",
-      options:["带着问题回到原文寻找依据","只猜答案","只看标题","完全不读文章"],
-      answer:0,
-      explain:"阅读理解要学会从原文中寻找证据。"
-    }
-  ],
-
-
-  "古诗三首":[
-    {
-      stage:0,
-      q:"“迟日江山丽”的“丽”是什么意思？",
-      options:["美丽","锋利","离开","很快"],
-      answer:0,
-      explain:"这里的“丽”表示美丽。"
-    },
-    {
-      stage:0,
-      q:"“蒌蒿满地芦芽短”中的“芦芽”指什么？",
-      options:["芦苇刚长出的嫩芽","荷花","柳树","竹笋"],
-      answer:0,
-      explain:"芦芽是芦苇刚刚长出的嫩芽。"
-    },
-    {
-      stage:1,
-      q:"“泥融飞燕子”描写的是哪个季节？",
-      options:["春季","夏季","秋季","冬季"],
-      answer:0,
-      explain:"泥土融化、燕子飞翔是春天的景象。"
-    },
-    {
-      stage:1,
-      q:"“梅子黄时日日晴”中的“黄”指什么？",
-      options:["梅子成熟变黄","天空变黄","树叶变黄","衣服变黄"],
-      answer:0,
-      explain:"这里说的是梅子逐渐成熟变黄。"
-    },
-    {
-      stage:2,
-      q:"《绝句》描写的主要景象是什么？",
-      options:["春日江山美景","冬日雪景","秋天落叶","夏日雷雨"],
-      answer:0,
-      explain:"诗中描写了春天温暖明丽的景象。"
-    },
-    {
-      stage:2,
-      q:"《惠崇春江晚景》中最有名的动物是？",
-      options:["鸭子","燕子","青蛙","蝴蝶"],
-      answer:0,
-      explain:"“竹外桃花三两枝，春江水暖鸭先知”。"
-    },
-    {
-      stage:3,
-      q:"学习古诗时，怎样更容易理解诗意？",
-      options:["结合画面和关键词理解","只背最后一句","只看题目","完全不读"],
-      answer:0,
-      explain:"想象画面、抓关键词能够帮助理解古诗。"
-    },
-    {
-      stage:3,
-      q:"阅读古诗最重要的是？",
-      options:["理解诗中的画面和感情","只记作者名字","只数字数","只背标题"],
-      answer:0,
-      explain:"理解诗歌描绘的画面和表达的感情非常重要。"
-    }
-  ],
-
-
-  "荷花":[
-    {
-      stage:0,
-      q:"“挨挨挤挤”的“挨”在这里表示什么？",
-      options:["靠得很近","等待","受到责骂","慢慢走"],
-      answer:0,
-      explain:"这里表示荷叶彼此靠得很近。"
-    },
-    {
-      stage:0,
-      q:"下面哪个词语适合描写荷花？",
-      options:["亭亭玉立","怒气冲冲","乱七八糟","冷冰冰"],
-      answer:0,
-      explain:"亭亭玉立常用来形容荷花姿态优美。"
-    },
-    {
-      stage:1,
-      q:"“清香”中的“清”可以理解为？",
-      options:["清淡、淡雅","很脏","很重","很吵"],
-      answer:0,
-      explain:"清香表示淡淡的、好闻的香味。"
-    },
-    {
-      stage:1,
-      q:"“冒出来”写出了荷花怎样的状态？",
-      options:["旺盛地生长出来","消失不见","掉落下来","变得很小"],
-      answer:0,
-      explain:"“冒出来”写出了荷花生长旺盛。"
-    },
-    {
-      stage:2,
-      q:"课文中把荷叶比作什么？",
-      options:["大圆盘","小船","彩带","星星"],
-      answer:0,
-      explain:"作者把荷叶比作一个个碧绿的大圆盘。"
-    },
-    {
-      stage:2,
-      q:"作者看到荷花时的感受主要是什么？",
-      options:["喜爱和赞美","害怕","厌倦","生气"],
-      answer:0,
-      explain:"作者沉浸在荷花的美丽中，表达了喜爱和赞美。"
-    },
-    {
-      stage:3,
-      q:"阅读写景文章时，可以重点关注什么？",
-      options:["颜色、形态、动作和感受","电话号码","数学公式","商品价格"],
-      answer:0,
-      explain:"这些内容能够帮助我们还原文章中的画面。"
-    },
-    {
-      stage:3,
-      q:"提高阅读理解最重要的方法之一是？",
-      options:["回到文章寻找依据","只凭感觉","只看标题","跳过全文"],
-      answer:0,
-      explain:"回答阅读题要有原文依据。"
-    }
-  ]
-
-};
+];
 
 
 /* =========================================================
-   为其余课文自动建立基础题库
-   这样页面不会因为缺少题库而无法进入。
-   ========================================================= */
+   根据不同关卡生成更丰富题目
+========================================================= */
 
-const defaultQuestions = {
+function buildQuestions(levelIndex){
 
-  stage0:[
-    {
-      q:"下面哪个词语与本课内容关系最密切？",
-      options:["认真学习","天气晴朗","快乐游戏","美丽景色"],
-      answer:0,
-      explain:"学习课文时要结合课文内容判断。"
-    },
-    {
-      q:"遇到不会写的生字，最好的方法是什么？",
-      options:["结合拼音、词语和句子学习","直接跳过","只看一遍","完全不读"],
-      answer:0,
-      explain:"结合拼音、词语和句子学习，记忆会更加牢固。"
-    }
-  ],
+  const result=[];
 
-  stage1:[
-    {
-      q:"学习词语时，怎样理解词语更准确？",
-      options:["联系上下文理解","只看字形","随便猜","完全不理解"],
-      answer:0,
-      explain:"联系上下文是理解词语的重要方法。"
-    },
-    {
-      q:"下面哪种方法有助于积累词语？",
-      options:["把词语放进句子中使用","只读一次","完全不使用","只看拼音"],
-      answer:0,
-      explain:"在具体句子中使用词语，可以帮助真正掌握。"
-    }
-  ],
+  for(let stage=0;stage<4;stage++){
 
-  stage2:[
-    {
-      q:"学习一篇课文，首先应该掌握什么？",
-      options:["课文的主要内容","作者电话号码","页码颜色","插图编号"],
-      answer:0,
-      explain:"理解主要内容是学习课文的重要基础。"
-    },
-    {
-      q:"课文中遇到不懂的地方应该怎么办？",
-      options:["联系上下文思考","马上放弃","随便猜","不再阅读"],
-      answer:0,
-      explain:"可以联系上下文，也可以查资料帮助理解。"
-    }
-  ],
-
-  stage3:[
-    {
-      q:"阅读理解题的答案最好来自哪里？",
-      options:["文章中的依据","自己的猜测","题目长短","运气"],
-      answer:0,
-      explain:"阅读理解要根据文章内容寻找证据。"
-    },
-    {
-      q:"题目问“主要内容”，应该怎么回答？",
-      options:["概括文章中心意思","抄整篇文章","只写一个字","只写标题"],
-      answer:0,
-      explain:"主要内容需要用自己的话进行概括。"
-    }
-  ]
-
-};
-
-
-/* =========================================================
-   自动补齐每篇课文
-   ========================================================= */
-
-function buildQuestionBank(){
-
-  return levels.map(level => {
-
-    const title = level[0];
-
-    if(templates[title]){
-      return templates[title];
-    }
-
-    const arr=[];
-
-    for(let s=0;s<4;s++){
-
-      const list=defaultQuestions["stage"+s];
-
-      list.forEach(q=>{
-        arr.push({
-          stage:s,
-          q:"【"+title+"】"+q.q,
-          options:[...q.options],
-          answer:q.answer,
-          explain:q.explain
-        });
+    commonQuestions[stage].forEach(q=>{
+      result.push({
+        ...q,
+        stage
       });
+    });
 
-    }
+  }
 
-    return arr;
-  });
-
+  return result;
 }
 
-const bank=buildQuestionBank();
-
 
 /* =========================================================
-   数据
-   ========================================================= */
-
-const STORAGE_KEY="grade3AdventureV2";
+   状态
+========================================================= */
 
 let data;
 
 try{
 
-  data=JSON.parse(
-    localStorage.getItem(STORAGE_KEY)
-  );
+ data=JSON.parse(
+   localStorage.getItem("grade3HighAdventure") ||
+   '{"name":"","stars":0,"coins":0,"done":{},"mistakes":[]}'
+ );
 
 }catch(e){
 
-  data=null;
+ data={
+   name:"",
+   stars:0,
+   coins:0,
+   done:{},
+   mistakes:[]
+ };
 
 }
 
-if(
-  !data ||
-  typeof data!=="object"
-){
-
-  data={
-    name:"",
-    stars:0,
-    coins:0,
-    done:{},
-    mistakes:[]
-  };
-
-}
-
-if(!data.done)data.done={};
-if(!Array.isArray(data.mistakes))data.mistakes=[];
-
-let currentLevel=0;
-let currentQuestion=0;
-let currentQuestions=[];
-let currentScore=0;
+let cur=0;
+let qi=0;
+let score=0;
+let questions=[];
+let answered=false;
 
 
 /* =========================================================
    工具
-   ========================================================= */
+========================================================= */
 
 function $(id){
-  return document.getElementById(id);
+ return document.getElementById(id);
 }
 
-
-function saveData(){
-
-  localStorage.setItem(
-    STORAGE_KEY,
-    JSON.stringify(data)
-  );
-
-  updateStats();
+function save(){
+ localStorage.setItem(
+   "grade3HighAdventure",
+   JSON.stringify(data)
+ );
+ updateStats();
 }
-
 
 function updateStats(){
+ $("stars").textContent=data.stars;
+ $("coins").textContent=data.coins;
+}
 
-  $("stars").textContent=data.stars;
-  $("coins").textContent=data.coins;
+function shuffle(arr){
 
+ const a=[...arr];
+
+ for(let i=a.length-1;i>0;i--){
+
+   const j=Math.floor(Math.random()*(i+1));
+
+   [a[i],a[j]]=[a[j],a[i]];
+
+ }
+
+ return a;
 }
 
 
-function hideAll(){
+/* =========================================================
+   随机化选择题
+========================================================= */
 
-  [
-    "home",
-    "game",
-    "result",
-    "mistakes"
-  ].forEach(id=>{
-    $(id).classList.add("hidden");
-  });
+function randomizeChoice(q){
 
-}
+ const items=q.o.map((text,index)=>({
+   text,
+   correct:index===q.a
+ }));
 
+ const mixed=shuffle(items);
 
-function goHome(){
-
-  hideAll();
-
-  $("home").classList.remove("hidden");
-
-  $("name").value=data.name || "";
-
-  renderLevels();
-
-}
-
-
-function saveName(){
-
-  data.name=$("name").value.trim();
-
-  saveData();
-
-  renderLevels();
+ return {
+   ...q,
+   o:mixed.map(x=>x.text),
+   a:mixed.findIndex(x=>x.correct)
+ };
 
 }
 
 
 /* =========================================================
-   关卡是否解锁
-   ========================================================= */
-
-function isUnlocked(index){
-
-  if(index===0){
-    return true;
-  }
-
-  return !!data.done[index-1];
-
-}
-
-
-/* =========================================================
-   渲染关卡
-   ========================================================= */
+   首页
+========================================================= */
 
 function renderLevels(){
 
-  let html="";
+ let html="";
 
-  levels.forEach((level,index)=>{
+ levels.forEach((level,i)=>{
 
-    const done=data.done[index] || 0;
-    const unlocked=isUnlocked(index);
+   const done=data.done[i]||0;
 
-    const percent=
-      Math.min(
-        100,
-        Math.round((done/4)*100)
-      );
+   /*
+      自动解锁：
+      第一关直接开放
+      后面的关卡需要上一关至少完成
+   */
 
-    html+=`
+   const locked=
+     i>0 &&
+     !(data.done[i-1]>=1);
 
-      <div class="card ${unlocked?"unlocked":"locked"}">
+   const stars=
+     "⭐".repeat(Math.min(done,3))+
+     "☆".repeat(3-Math.min(done,3));
 
-        <span class="badge">
-          ${unlocked ? level[2] : "🔒"}
-        </span>
+   html+=`
 
-        <h3>
-          第${index+1}关 · ${level[0]}
-        </h3>
+   <div class="card ${locked?"locked":""}">
 
-        <p>
-          ${level[1]}
-        </p>
+      <span class="badge">
+        ${locked?"🔒":level[2]}
+      </span>
 
-        <div class="stars">
-          ${"⭐".repeat(done)}
-          ${"☆".repeat(4-done)}
-        </div>
+      <h3>第${i+1}关 · ${level[0]}</h3>
 
-        <div class="level-progress">
-          ${unlocked
-            ? done>=4
-              ? "🎉 已完成全部训练"
-              : "🔓 已解锁"
-            : "🔒 完成上一关后解锁"
-          }
-        </div>
+      <p>${level[1]}</p>
 
-        <div class="progress">
-          <i style="width:${percent}%"></i>
-        </div>
+      <div class="stars">${stars}</div>
 
-        <div style="margin-top:10px">
-
-          <button
-            class="${unlocked?"primary":"secondary"}"
-            ${unlocked?"":"disabled"}
-            onclick="startLevel(${index})"
-          >
-            ${
-              unlocked
-              ? done>=4
-                ? "🔄 再挑战"
-                : "🚀 开始闯关"
-              : "🔒 未解锁"
-            }
-          </button>
-
-        </div>
-
+      <div class="progress">
+        <i style="width:${done?100:0}%"></i>
       </div>
-    `;
 
-  });
+      <p class="small">
+        ${locked
+          ?"完成上一关后自动解锁"
+          :"四阶段 · 多题型 · 高难度"}
+      </p>
 
-  $("levels").innerHTML=html;
+      <button
+        class="${locked?"secondary":"primary"}"
+        ${locked?"disabled":""}
+        data-level="${i}"
+      >
+        ${locked?"🔒 未解锁":done?"🔄 再挑战":"🚀 开始闯关"}
+      </button>
 
-  updateStats();
+   </div>
 
+   `;
+
+ });
+
+ $("levels").innerHTML=html;
+
+ document.querySelectorAll("[data-level]").forEach(btn=>{
+
+   btn.addEventListener("click",()=>{
+
+     const index=Number(btn.dataset.level);
+
+     start(index);
+
+   });
+
+ });
+
+ updateStats();
 }
 
 
 /* =========================================================
-   随机打乱数组
-   ========================================================= */
+   页面切换
+========================================================= */
 
-function shuffle(array){
+function hideAll(){
 
-  const arr=[...array];
+ ["home","game","result","mistakes"].forEach(id=>{
+   $(id).classList.add("hidden");
+ });
 
-  for(let i=arr.length-1;i>0;i--){
+}
 
-    const j=Math.floor(
-      Math.random()*(i+1)
-    );
+function goHome(){
 
-    [arr[i],arr[j]]=[
-      arr[j],
-      arr[i]
-    ];
+ hideAll();
 
-  }
+ $("home").classList.remove("hidden");
 
-  return arr;
+ $("name").value=data.name||"";
+
+ renderLevels();
+
+}
+
+function saveName(){
+
+ data.name=$("name").value.trim();
+
+ save();
 
 }
 
 
 /* =========================================================
    开始关卡
-   ========================================================= */
+========================================================= */
 
-function startLevel(index){
+function start(index){
 
-  if(!isUnlocked(index)){
+ if(index>0 && !(data.done[index-1]>=1)){
 
-    alert("🔒 请先完成上一关！");
-    return;
+   alert("请先完成上一关哦！🔓");
 
-  }
+   return;
 
-  currentLevel=index;
-  currentQuestion=0;
-  currentScore=0;
+ }
 
-  /*
-   每次进入关卡都重新打乱题目
-  */
+ cur=index;
 
-  currentQuestions=shuffle(
-    bank[index]
-  );
+ qi=0;
 
-  hideAll();
+ score=0;
 
-  $("game").classList.remove("hidden");
+ answered=false;
 
-  $("levelTitle").textContent=
-    levelEmoji(index)+" "+
-    levels[index][0];
+ /*
+    每次重新挑战都重新随机题目顺序
+ */
 
-  showQuestion();
+ questions=shuffle(buildQuestions(index));
 
-}
+ /*
+    每道题的选择题再随机一次选项
+ */
 
+ questions=questions.map(q=>{
 
-/* =========================================================
-   Emoji
-   ========================================================= */
+   if(q.type==="choice"){
+     return randomizeChoice(q);
+   }
 
-function levelEmoji(index){
+   return q;
 
-  return levels[index][2];
+ });
+
+ hideAll();
+
+ $("game").classList.remove("hidden");
+
+ $("levelTitle").textContent=
+   levels[index][2]+" "+levels[index][0];
+
+ showQuestion();
 
 }
 
 
 /* =========================================================
    显示题目
-   ========================================================= */
+========================================================= */
 
 function showQuestion(){
 
-  const item=
-    currentQuestions[currentQuestion];
+ const q=questions[qi];
 
-  if(!item){
+ answered=false;
 
-    finishLevel();
-    return;
+ $("qNo").textContent=(qi+1)+"/"+questions.length;
 
-  }
+ $("qStars").textContent=
+   "本关得分："+score+" ⭐";
 
-  $("qNo").textContent=
-    currentQuestion+1;
+ $("questionType").textContent=
+   q.type==="choice"
+     ?"选择题"
+     :q.type==="fill"
+       ?"拼音/填空题"
+       :q.type==="judge"
+         ?"判断题"
+         :"简答题";
 
-  $("qTotal").textContent=
-    currentQuestions.length;
+ /*
+    阶段
+ */
 
-  $("question").textContent=
-    item.q;
+ document.querySelectorAll(".stage span")
+   .forEach(x=>x.classList.remove("active"));
 
-  $("questionType").textContent=
-    getStageName(item.stage);
+ $("stage"+(q.stage+1))
+   .classList.add("active");
 
-  $("qStars").textContent=
-    "答对本题：⭐ +1　🪙 +2";
+ /*
+    阅读文章
+ */
 
-  $("feedback").innerHTML="";
+ if(q.article){
 
-  $("nextBtn").classList.add("hidden");
+   $("article").classList.remove("hidden");
 
-  updateStage(item.stage);
+   $("article").textContent=q.article;
 
+ }else{
 
-  /*
-   =====================================================
-   关键修复：
-   对选项重新随机排列，同时保存正确答案对象。
-   不再直接使用原来的 answer 下标。
-   =====================================================
-  */
+   $("article").classList.add("hidden");
 
-  const optionObjects=
-    item.options.map(
-      (text,index)=>({
+   $("article").textContent="";
 
-        text:text,
+ }
 
-        correct:
-          index===item.answer
+ $("question").textContent=q.q;
 
-      })
-    );
+ $("feedback").innerHTML="";
 
-  const shuffledOptions=
-    shuffle(optionObjects);
+ $("nextBtn").classList.add("hidden");
+
+ $("submitBtn").classList.add("hidden");
+
+ $("answerArea").innerHTML="";
 
 
-  $("options").innerHTML=
-    shuffledOptions.map(
-      (option,index)=>`
+ /* =========================
+    选择题
+ ========================= */
 
-        <button
-          class="option"
-          data-correct="${option.correct}"
-          data-answer="${escapeHtml(option.text)}"
-          onclick="selectAnswer(this)"
-        >
-          ${"ABCD"[index]}. ${escapeHtml(option.text)}
-        </button>
+ if(q.type==="choice"){
 
-      `
-    ).join("");
+   $("answerArea").innerHTML=`
+
+   <div class="options">
+
+   ${q.o.map((option,index)=>`
+
+     <button
+       class="option"
+       data-option="${index}"
+     >
+       ${"ABCD"[index]}．${option}
+     </button>
+
+   `).join("")}
+
+   </div>
+
+   `;
+
+   document
+     .querySelectorAll("[data-option]")
+     .forEach(btn=>{
+
+       btn.addEventListener("click",()=>{
+
+         if(answered)return;
+
+         answerChoice(
+           Number(btn.dataset.option),
+           btn
+         );
+
+       });
+
+     });
+
+ }
+
+
+ /* =========================
+    判断题
+ ========================= */
+
+ else if(q.type==="judge"){
+
+   $("answerArea").innerHTML=`
+
+   <div class="options">
+
+     <button class="option" data-judge="true">
+       A．正确
+     </button>
+
+     <button class="option" data-judge="false">
+       B．错误
+     </button>
+
+   </div>
+
+   `;
+
+   document
+     .querySelectorAll("[data-judge]")
+     .forEach(btn=>{
+
+       btn.addEventListener("click",()=>{
+
+         if(answered)return;
+
+         answerJudge(
+           btn.dataset.judge==="true",
+           btn
+         );
+
+       });
+
+     });
+
+ }
+
+
+ /* =========================
+    填空题
+ ========================= */
+
+ else if(q.type==="fill"){
+
+   $("answerArea").innerHTML=`
+
+     <input
+       id="textAnswer"
+       class="answer-input"
+       placeholder="请输入答案"
+       autocomplete="off"
+     >
+
+   `;
+
+   $("submitBtn").classList.remove("hidden");
+
+ }
+
+
+ /* =========================
+    简答题
+ ========================= */
+
+ else if(q.type==="text"){
+
+   $("answerArea").innerHTML=`
+
+     <textarea
+       id="textAnswer"
+       class="answer-input"
+       rows="4"
+       placeholder="请用自己的话回答……"
+     ></textarea>
+
+   `;
+
+   $("submitBtn").classList.remove("hidden");
+
+ }
 
 }
 
 
 /* =========================================================
-   阶段名称
-   ========================================================= */
+   选择题
+========================================================= */
 
-function getStageName(stage){
+function answerChoice(index,btn){
 
-  const names=[
-    "🔤 生字训练",
-    "📝 词语训练",
-    "📖 课文理解",
-    "📚 阅读理解"
-  ];
+ if(answered)return;
 
-  return names[stage] || "语文训练";
+ answered=true;
+
+ const q=questions[qi];
+
+ const buttons=
+   document.querySelectorAll("[data-option]");
+
+ buttons.forEach(b=>b.disabled=true);
+
+ if(index===q.a){
+
+   btn.classList.add("correct");
+
+   score++;
+
+   data.stars++;
+
+   data.coins+=2;
+
+   $("feedback").innerHTML=
+     `<div class="feedback ok">
+       🎉 回答正确！<br>
+       ⭐ +1星星　🪙 +2积分
+     </div>`;
+
+ }else{
+
+   btn.classList.add("wrong");
+
+   buttons[q.a].classList.add("correct");
+
+   addMistake(
+     q,
+     q.o[index],
+     q.o[q.a]
+   );
+
+   $("feedback").innerHTML=
+     `<div class="feedback bad">
+       💡 再想一想！<br>
+       正确答案：<b>${q.o[q.a]}</b>
+     </div>`;
+
+ }
+
+ save();
+
+ showNext();
 
 }
 
 
 /* =========================================================
-   阶段显示
-   ========================================================= */
+   判断题
+========================================================= */
 
-function updateStage(stage){
+function answerJudge(value,btn){
 
-  for(let i=0;i<4;i++){
+ if(answered)return;
 
-    const el=$("stage"+i);
+ answered=true;
 
-    el.classList.remove(
-      "active",
-      "done"
-    );
+ const q=questions[qi];
 
-    if(i<stage){
-      el.classList.add("done");
-    }
+ document
+   .querySelectorAll("[data-judge]")
+   .forEach(b=>b.disabled=true);
 
-    if(i===stage){
-      el.classList.add("active");
-    }
+ const correct=
+   value===q.a;
 
-  }
+ if(correct){
+
+   btn.classList.add("correct");
+
+   score++;
+
+   data.stars++;
+
+   data.coins+=2;
+
+   $("feedback").innerHTML=
+     `<div class="feedback ok">
+       🎉 判断正确！⭐ +1　🪙 +2
+     </div>`;
+
+ }else{
+
+   btn.classList.add("wrong");
+
+   const correctBtn=
+     document.querySelector(
+       `[data-judge="${q.a}"]`
+     );
+
+   if(correctBtn)
+     correctBtn.classList.add("correct");
+
+   addMistake(
+     q,
+     value?"正确":"错误",
+     q.a?"正确":"错误"
+   );
+
+   $("feedback").innerHTML=
+     `<div class="feedback bad">
+       💡 判断错误。正确答案是：
+       <b>${q.a?"正确":"错误"}</b>
+     </div>`;
+
+ }
+
+ save();
+
+ showNext();
 
 }
 
 
 /* =========================================================
-   选择答案
-   ========================================================= */
+   文本题
+========================================================= */
 
-function selectAnswer(btn){
+function submitText(){
 
-  /*
-   防止重复点击
-  */
+ if(answered)return;
 
-  const buttons=
-    document.querySelectorAll(".option");
+ const input=$("textAnswer");
 
-  buttons.forEach(b=>{
-    b.disabled=true;
-  });
+ if(!input)return;
 
+ const value=input.value.trim();
 
-  const isCorrect=
-    btn.dataset.correct==="true";
+ if(!value){
 
+   alert("先写下你的答案哦！");
 
-  const item=
-    currentQuestions[currentQuestion];
+   input.focus();
 
+   return;
 
-  if(isCorrect){
+ }
 
-    btn.classList.add("correct");
+ answered=true;
 
-    currentScore++;
+ input.disabled=true;
 
-    data.stars++;
-    data.coins+=2;
+ const q=questions[qi];
 
-    $("feedback").innerHTML=`
+ let correct=false;
 
-      <div class="feedback ok">
+ if(q.type==="fill"){
 
-        🎉 <b>答对啦！</b><br>
+   correct=
+     value.replace(/\s/g,"").toLowerCase()===
+     q.a.replace(/\s/g,"").toLowerCase();
 
-        ⭐ +1 星星　🪙 +2 积分
+ }else{
 
-        ${
-          item.explain
-          ? "<br>💡 "+escapeHtml(item.explain)
-          : ""
-        }
+   /*
+      简答题不是要求完全一致。
+      只要包含题目要求的关键词即可。
+   */
 
-      </div>
+   const words=q.a||[];
 
-    `;
+   correct=
+     words.some(word=>value.includes(word));
 
-  }else{
+ }
 
-    btn.classList.add("wrong");
+ if(correct){
 
+   score++;
 
-    /*
-     找出真正的正确答案
-    */
+   data.stars++;
 
-    buttons.forEach(b=>{
+   data.coins+=3;
 
-      if(b.dataset.correct==="true"){
+   $("feedback").innerHTML=
+     `<div class="feedback ok">
+       🎉 回答不错！<br>
+       ⭐ +1星星　🪙 +3积分
+     </div>`;
 
-        b.classList.add("correct");
+ }else{
 
-      }
+   const correctAnswer=
+     Array.isArray(q.a)
+       ?q.a.join("、")
+       :q.a;
 
-    });
+   addMistake(
+     q,
+     value,
+     correctAnswer
+   );
 
+   $("feedback").innerHTML=
+     `<div class="feedback bad">
+       💡 这道题需要再理解一下。<br>
+       参考答案：<b>${correctAnswer}</b>
+     </div>`;
 
-    const correctAnswer=
-      item.options[item.answer];
+ }
 
+ save();
 
-    const selectedAnswer=
-      btn.dataset.answer;
+ $("submitBtn").classList.add("hidden");
 
+ showNext();
 
-    data.mistakes.unshift({
+}
 
-      level:currentLevel,
 
-      levelName:levels[currentLevel][0],
+/* =========================================================
+   错题
+========================================================= */
 
-      stage:item.stage,
+function addMistake(q,userAnswer,correctAnswer){
 
-      question:item.q,
+ data.mistakes.unshift({
 
-      selected:selectedAnswer,
+   level:cur,
 
-      answer:correctAnswer,
+   levelName:levels[cur][0],
 
-      explain:item.explain || "",
+   q:q.q,
 
-      time:new Date().toLocaleString()
+   userAnswer:userAnswer,
 
-    });
+   answer:correctAnswer,
 
+   stage:q.stage,
 
-    /*
-     最多保存100道错题
-    */
+   time:new Date().toLocaleString()
 
-    data.mistakes=
-      data.mistakes.slice(0,100);
+ });
 
-
-    $("feedback").innerHTML=`
-
-      <div class="feedback bad">
-
-        ❌ <b>这次答错了</b><br>
-
-        你的答案：
-        ${escapeHtml(selectedAnswer)}<br>
-
-        正确答案：
-        <strong>${escapeHtml(correctAnswer)}</strong>
-
-        ${
-          item.explain
-          ? "<br>💡 "+escapeHtml(item.explain)
-          : ""
-        }
-
-      </div>
-
-    `;
-
-  }
-
-
-  saveData();
-
-
-  $("nextBtn").classList.remove("hidden");
-
-
-  if(
-    currentQuestion===
-    currentQuestions.length-1
-  ){
-
-    $("nextBtn").textContent=
-      "🏆 查看本关成绩";
-
-  }else{
-
-    $("nextBtn").textContent=
-      "下一题 →";
-
-  }
+ data.mistakes=
+   data.mistakes.slice(0,200);
 
 }
 
 
 /* =========================================================
    下一题
-   ========================================================= */
+========================================================= */
+
+function showNext(){
+
+ $("nextBtn").classList.remove("hidden");
+
+ $("nextBtn").textContent=
+   qi===questions.length-1
+     ?"查看成绩 🏆"
+     :"下一题 →";
+
+}
 
 function nextQuestion(){
 
-  if(
-    currentQuestion<
-    currentQuestions.length-1
-  ){
+ if(qi<questions.length-1){
 
-    currentQuestion++;
+   qi++;
 
-    showQuestion();
+   showQuestion();
 
-  }else{
+ }else{
 
-    finishLevel();
+   finish();
 
-  }
+ }
 
 }
 
 
 /* =========================================================
-   完成本关
-   ========================================================= */
+   完成
+========================================================= */
 
-function finishLevel(){
+function finish(){
 
-  /*
-   4星代表本关完成。
-   每完成一次关卡就解锁下一关。
-  */
+ /*
+    根据得分给星级
+ */
 
-  const starsEarned=
-    currentScore>=
-    Math.ceil(currentQuestions.length*.75)
-    ?4
-    :currentScore>=
-      Math.ceil(currentQuestions.length*.5)
-      ?3
-      :currentScore>=
-        Math.ceil(currentQuestions.length*.25)
-        ?2
-        :1;
+ const percent=
+   score/questions.length;
 
+ const stars=
+   percent>=.85
+     ?3
+     :percent>=.65
+       ?2
+       :1;
 
-  data.done[currentLevel]=Math.max(
+ data.done[cur]=Math.max(
+   data.done[cur]||0,
+   stars
+ );
 
-    data.done[currentLevel] || 0,
+ save();
 
-    starsEarned
+ hideAll();
 
-  );
+ $("result").classList.remove("hidden");
 
+ $("resultTitle").textContent=
+   stars===3
+     ?"太厉害了！🏆"
+     :stars===2
+       ?"完成得不错！👏"
+       :"挑战完成！继续加油！💪";
 
-  saveData();
+ $("resultText").textContent=
+   (data.name?data.name+"，":"")+
+   "你完成了《"+
+   levels[cur][0]+
+   "》挑战，共 "+
+   questions.length+
+   " 题，答对 "+
+   score+
+   " 题。";
 
-
-  hideAll();
-
-  $("result").classList.remove("hidden");
-
-
-  $("resultTitle").textContent=
-    starsEarned>=4
-    ? "🎉 太棒了！本关完成！"
-    : starsEarned>=3
-      ? "👏 做得很好！"
-      : "💪 挑战完成！继续练习";
-
-
-  $("resultText").textContent=
-    (data.name
-      ? data.name+"，"
-      : ""
-    )+
-    "你完成了《"+
-    levels[currentLevel][0]+
-    "》！本次答对 "+
-    currentScore+
-    "/"+
-    currentQuestions.length+
-    " 题。";
-
-
-  $("resultStars").textContent=
-    "⭐".repeat(starsEarned)+
-    "☆".repeat(4-starsEarned);
-
-
-  $("resultReward").innerHTML=
-    `
-      本次获得：
-      ⭐ ${currentScore} 星星
-     　
-      🪙 ${currentScore*2} 积分
-      <br><br>
-      ${
-        currentLevel<
-        levels.length-1
-        ? "🔓 下一关已经解锁！"
-        : "🏆 恭喜你完成全部关卡！"
-      }
-    `;
+ $("resultStars").textContent=
+   "⭐".repeat(stars)+
+   "☆".repeat(3-stars);
 
 }
 
 
 /* =========================================================
    错题本
-   ========================================================= */
+========================================================= */
 
 function showMistakes(){
 
-  hideAll();
+ hideAll();
 
-  $("mistakes").classList.remove("hidden");
+ $("mistakes").classList.remove("hidden");
 
-  const list=data.mistakes || [];
+ $("mistakeCount").textContent=
+   "目前共有 "+
+   data.mistakes.length+
+   " 道错题。";
 
+ if(!data.mistakes.length){
 
-  $("mistakeCount").textContent=
-    "目前共有 "+
-    list.length+
-    " 道错题。";
+   $("mistakeList").innerHTML=
+     `<div class="center">
+       🎉 暂时没有错题，继续保持！
+     </div>`;
 
+   return;
 
-  if(!list.length){
+ }
 
-    $("mistakeList").innerHTML=`
+ $("mistakeList").innerHTML=
+   data.mistakes.map((m,i)=>`
 
-      <div class="center">
+   <div class="mistake">
 
-        🎉
+     <b>${i+1}. 第${m.level+1}关 · ${m.levelName||""}</b>
 
-        <p>
-          目前还没有错题！
-        </p>
+     <br>
 
-        <p class="small">
-          做错的题目会自动保存到这里。
-        </p>
+     <span class="small">
+       ${["生字","词语","课文理解","阅读理解"][m.stage]||""}
+     </span>
 
-      </div>
+     <br>
 
-    `;
+     ${m.q}
 
-    return;
+     <br>
 
-  }
+     <span style="color:#ef5350">
+       你的答案：${m.userAnswer}
+     </span>
 
+     <br>
 
-  $("mistakeList").innerHTML=
-    list.map((m,index)=>`
+     <span style="color:#2e7d32">
+       正确/参考答案：${m.answer}
+     </span>
 
-      <div class="mistake">
+     <br>
 
-        <b>
-          ${index+1}. 第${m.level+1}关 ·
-          ${escapeHtml(m.levelName || "")}
-        </b>
+     <span class="small">
+       ${m.time}
+     </span>
 
-        <br>
+   </div>
 
-        <span class="small">
-          ${getStageName(m.stage)}
-        </span>
-
-        <br><br>
-
-        <strong>
-          ${escapeHtml(m.question)}
-        </strong>
-
-        <br>
-
-        ❌ 你的答案：
-        ${escapeHtml(m.selected)}
-
-        <br>
-
-        ✅ 正确答案：
-        <strong>
-          ${escapeHtml(m.answer)}
-        </strong>
-
-        ${
-          m.explain
-          ? "<br>💡 "+escapeHtml(m.explain)
-          : ""
-        }
-
-        <br>
-
-        <span class="small">
-          ${escapeHtml(m.time || "")}
-        </span>
-
-      </div>
-
-    `).join("");
+   `).join("");
 
 }
 
 
 /* =========================================================
    今日挑战
-   ========================================================= */
+========================================================= */
 
 function daily(){
 
-  const index=
-    new Date().getDate()%
-    levels.length;
+ const index=
+   new Date().getDate()%levels.length;
 
-  /*
-   今日挑战如果还没有解锁，
-   自动找当前已经解锁的关卡。
-  */
+ /*
+    今日挑战不绕过解锁规则
+ */
 
-  let target=index;
+ if(index>0 && !(data.done[index-1]>=1)){
 
-  if(!isUnlocked(target)){
+   alert(
+     "今日挑战对应第"+(index+1)+"关，"+
+     "请先完成前面的关卡哦！"
+   );
 
-    target=0;
+   return;
 
-    for(let i=0;i<levels.length;i++){
+ }
 
-      if(isUnlocked(i)){
-        target=i;
-      }else{
-        break;
-      }
-
-    }
-
-  }
-
-  startLevel(target);
+ start(index);
 
 }
 
 
 /* =========================================================
    重置
-   ========================================================= */
+========================================================= */
 
 function resetAll(){
 
-  const ok=
-    confirm(
-      "确定要清除全部学习记录吗？\n\n"+
-      "星星、积分、关卡进度和错题本都会清除。"
-    );
+ if(
+   confirm(
+     "确定清除全部学习记录吗？\n"+
+     "星星、积分、关卡和错题本都会清除。"
+   )
+ ){
 
-  if(!ok)return;
+   localStorage.removeItem(
+     "grade3HighAdventure"
+   );
 
-  localStorage.removeItem(STORAGE_KEY);
+   location.reload();
 
-  location.reload();
-
-}
-
-
-/* =========================================================
-   HTML安全处理
-   ========================================================= */
-
-function escapeHtml(value){
-
-  return String(value)
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
+ }
 
 }
 
 
 /* =========================================================
    事件绑定
-   ========================================================= */
+========================================================= */
 
-$("startAdventureBtn")
-  .addEventListener(
-    "click",
-    saveName
-  );
+$("startAdventure").addEventListener(
+ "click",
+ saveName
+);
 
+$("mistakeBtn").addEventListener(
+ "click",
+ showMistakes
+);
 
-$("mistakeBtn")
-  .addEventListener(
-    "click",
-    showMistakes
-  );
+$("dailyBtn").addEventListener(
+ "click",
+ daily
+);
 
+$("resetBtn").addEventListener(
+ "click",
+ resetAll
+);
 
-$("dailyBtn")
-  .addEventListener(
-    "click",
-    daily
-  );
+$("homeBtn").addEventListener(
+ "click",
+ goHome
+);
 
+$("mistakeHome").addEventListener(
+ "click",
+ goHome
+);
 
-$("resetBtn")
-  .addEventListener(
-    "click",
-    resetAll
-  );
+$("resultHome").addEventListener(
+ "click",
+ goHome
+);
 
+$("replayBtn").addEventListener(
+ "click",
+ ()=>start(cur)
+);
 
-$("backBtn")
-  .addEventListener(
-    "click",
-    goHome
-  );
+$("nextBtn").addEventListener(
+ "click",
+ nextQuestion
+);
 
-
-$("mistakeBackBtn")
-  .addEventListener(
-    "click",
-    goHome
-  );
-
-
-$("nextBtn")
-  .addEventListener(
-    "click",
-    nextQuestion
-  );
-
-
-$("homeBtn")
-  .addEventListener(
-    "click",
-    goHome
-  );
-
-
-$("replayBtn")
-  .addEventListener(
-    "click",
-    ()=>{
-      startLevel(currentLevel);
-    }
-  );
+$("submitBtn").addEventListener(
+ "click",
+ submitText
+);
 
 
 /* =========================================================
    初始化
-   ========================================================= */
+========================================================= */
 
-$("name").value=
-  data.name || "";
+$("name").value=data.name||"";
 
 renderLevels();
-
-updateStats();
 
 </script>
 
